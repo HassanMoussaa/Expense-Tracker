@@ -9,7 +9,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   </head>
   <body>
-    <h1>Hello!</h1>
+    <h1>Expense Tracker</h1>
+
+    <form action="">
+      <label for="expenseName">Expense Name</label>
+      <input type="text" id="expenseName" required />
+      <label for="amount">Amount</label>
+      <input type="text" id="amount" required />
+      <button>Add Your Expense !</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Expanse Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
     <script src="scripts\script.js"></script>
   </body>
 </html>
