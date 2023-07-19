@@ -1,7 +1,7 @@
 function expenseRowElement(expense,amount) {
   return `<tr>
     
-    <td>
+    <td class="forDesign">
     <button class="remove">&#128465</button>
     <span class="expense">${expense}</span>
     </td>
@@ -31,7 +31,7 @@ function addExpenseItem(){
 
 
 
-     let total=$(".totalAmount")
+    let total=$(".totalAmount")
     let sum=0
     let bodyRows = $("td span.amount");
     bodyRows.each(function() {

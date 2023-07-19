@@ -1,10 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 table,
 td {
   border: 1px solid #333;
+  text-align: center;
+  width: 50%;
 }
 
 thead,
 tfoot {
   background-color: #333;
   color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+input {
+  width: 100px;
+}
+
+.remove {
+  text-align: start;
+}
+
+.forDesign {
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 45%;
 }

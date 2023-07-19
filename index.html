@@ -10,29 +10,30 @@
   </head>
   <body>
     <h1>Expense Tracker</h1>
+    <div class="wrapper">
+      <form action="">
+        <label for="expenseName">Expense Name</label>
+        <input type="text" id="expenseName" required />
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" required />
+        <button id="addExpense">Add Your Expense !</button>
+      </form>
 
-    <form action="">
-      <label for="expenseName">Expense Name</label>
-      <input type="text" id="expenseName" required />
-      <label for="amount">Amount</label>
-      <input type="text" id="amount" required />
-      <button id="addExpense">Add Your Expense !</button>
-    </form>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Expanse Name</th>
-          <th>Amount($)</th>
-        </tr>
-      </thead>
-      <tbody class="tbody">
-        <tr>
-          <td>Total</td>
-          <td class="totalAmount"></td>
-        </tr>
-      </tbody>
-    </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Expanse Name</th>
+            <th>Amount($)</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr>
+            <td>Total</td>
+            <td class="totalAmount"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <script src="scripts\script.js"></script>
   </body>
