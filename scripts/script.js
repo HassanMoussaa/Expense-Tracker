@@ -1,17 +1,19 @@
-function expenseRowElement(expense,amount) {
-  return `<tr>
+  function expenseRowElement(expense,amount) {
+    return `<tr>
     
-    <td class="forDesign">
+    <td class="forDesign_td">
+
     <button class="remove">&#128465</button>
     <span class="expense">${expense}</span>
     </td>
+
     <td><span class="amount">${amount}</span></td>
 
   </tr>`
 }
 
 
-function addExpenseItem(){
+  function addExpenseItem(){
    const expenseInput=$("#expenseName");
    const amountInput=$("#amount");
    const tableBody=$("tbody");
@@ -25,12 +27,12 @@ function addExpenseItem(){
     tableBody.prepend(expenseRow);
 
 
-    //todo: remove
+    //expense: remove
     expenseRow.find(".remove").click(function () {
     expenseRow.remove()
 
 
-
+    //expense: remove (handeling the total counter)
     let total=$(".totalAmount")
     let sum=0
     let bodyRows = $("td span.amount");
@@ -45,7 +47,7 @@ function addExpenseItem(){
     expenseInput.val("");
     amountInput.val("");
 
-    
+    //total counter
     let total=$(".totalAmount")
     let sum=0
     let bodyRows = $("td span.amount");
@@ -57,6 +59,8 @@ function addExpenseItem(){
      total.text(sum)
 
 }
+
+
 $(document).ready(function(){
 
 
