@@ -28,6 +28,18 @@ function addExpenseItem(){
     //todo: remove
     expenseRow.find(".remove").click(function () {
     expenseRow.remove()
+
+
+
+     let total=$(".totalAmount")
+    let sum=0
+    let bodyRows = $("td span.amount");
+    bodyRows.each(function() {
+     let amountText = $(this).text();
+     let amountValue = parseFloat(amountText);
+     sum+=amountValue
+    })
+     total.text(sum)
   })
 
     expenseInput.val("");
