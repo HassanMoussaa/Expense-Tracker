@@ -12,50 +12,44 @@ function expenseRowElement(expense,amount) {
 
 
 function addExpenseItem(){
-const expanseInput=$("#expenseName");
-const amountInput=$("#amount");
-const tableBody=$("tbody");
+   const expenseInput=$("#expenseName");
+   const amountInput=$("#amount");
+   const tableBody=$("tbody");
 
 
-if (expanseInput.val().trim() === ""   ||  amountInput.val().trim() === "") return;
+   if (expenseInput.val().trim() === ""   ||  amountInput.val().trim() === "") return;
 
 
-const expenseRow=$(expenseRowElement(expanseInput.val(),amountInput.val()))
+    const expenseRow=$(expenseRowElement(expenseInput.val(),amountInput.val()))
 
-tableBody.prepend(expenseRow);
+    tableBody.prepend(expenseRow);
 
 
- //todo: remove
-  expenseRow.find(".remove").click(function () {
+    //todo: remove
+    expenseRow.find(".remove").click(function () {
     expenseRow.remove()
   })
 
+    expenseInput.val("");
+    amountInput.val("");
 
+    
+    let total=$(".totalAmount")
+    let sum=0
+    let bodyRows = $("td span.amount");
+    bodyRows.each(function() {
+     let amountText = $(this).text();
+     let amountValue = parseFloat(amountText);
+     sum+=amountValue
+    })
+     total.text(sum)
 
-
-
-
-expanseInput.val("");
-amountInput.val("");
 }
-
-
 $(document).ready(function(){
 
 
   const addButton = $("#addExpense");
   // add item
   addButton.click(addExpenseItem)
-
-let bodyRows= $("#tbody")
-
-for (const row in tbody) {
-    if (Object.hasOwnProperty.call(object, key)) {
-        const element = object[key];
-        
-    }
-}
-
-
 
 })
